@@ -1,0 +1,105 @@
+1 - Evaluación de protocolos de una clase
+
+En este caso elijo la OPCION 2 ya que definir la esquinaSuperiorIzquierda y la altura y ancho del rectángulo como propiedades, me permite construir un rectángulo que no vaya a romper el invariante (que debería tener) de que sea un rectángulo con forma de Rectángulo.
+Dar total libertad de asignar valores a cada esquina podría terminar rompiendo la forma buscada.
+
+Además, construir un objeto con los atributos que debe tener es mejor que construir un objeto vacío y que luego toma forma. De la primera manera podría validar en la instancia si sus valores son válidos. De la otra forma, si tengo un objeto vacío podría asignarle menos valores de los necesarios y quizás complejizaría la validación de datos.
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+
+2 – Delegación
+
+En este problema, también elijo la OPCION 2, ya que el encapsulamiento de la estructura de datos con la que trabaja la clase Secretario se mantiene oculta para la clase Jefe.
+La clase Jefe no debe conocer la construcción interna de la clase Secretario (esto sucede en la opción 1). Conociendo los mensajes apropiados para el buen funcionamiento es suficiente.
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+
+3 - Polimorfismo
+
+Opción 1. En principio, se supone que self.class() siempre va a retornar CuentaBancaria, por lo cual "if (self.class() == CuentaCorriente)" siempre va a ser false y no tiene sentido.
+Además, no es escalable (igual que la opcioón 2).
+
+Opción 2. Es mejor trabajar con Herencia y Polimorfismo, con distintas clases, en lugar de estar preguntando si X objeto es "cuentaCorriente".
+Además, si se agregan más tipos de CuentaBancaria habría que modificar el código preguntando si es "cuentaBancaria" o si es "otraCuenta" o etc...
+
+Opción 3. Mejor versión que las anteriores pero tiene una porción de código repetida. Sería mejor identificar que se repite y que las diferencia y realizar una abstracción mejor del problema.
+
+Opción 4. La versión o solución correcta. Diferencia la porción de código o validación necesaria para el funcionamiento de cada subclase y la sobreescribe con las particularidades de cada una.
+En la clase padre, deja lo que es general para las subclases y evita la repetición de código.
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+
+Actividad de lectura #1
+
+Luego responda a las siguientes preguntas:
+1. ¿Qué significa el acceso directo a las variables? De un ejemplo.
+2. ¿Qué significa el acceso indirecto a las variables? De un ejemplo.
+3. Qué ventajas y desventajas presenta cada estrategia referida a los getters y setters.
+
+
+1. El acceso directo a las variables hace referencia a la forma en que se acceden a las variables de instancia de un objeto. Como lo dice y describe, en este caso es de manera directa.
+Aquí las variables son referidas directamente por el objeto como: objeto.variable.
+
+2. El acceso indirecto refiere a una estrategia de programación que requiere que para acceder a las variables de instancia se debe hacer solo através de un método. 
+Para este necesitamos un método de acceso al valor de la variable, llamado Getter y un método para modificar el valor de una variable de instancia, llamado Setter.
+Ejemplo: 
+object.getName() (ejemplo getter)
+object.setName("new_name") (ejemplo setter)
+
+3. Las ventajas que tiene esta estrategia son varias, la principal es la posibilidad de poner como privados los métodos de acceso o, en caso de necesitarlo, como públicos.
+Nos da control de validación sobre los valores que se vayan a settear, para evitar valores inválidos que podrían rompar el invariante.
+
+Una desventaja podría ser la pérdida de legibilidad sobre el código.
+
+
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+Actividad de lectura #2
+
+En base al siguiente fragmento, responda:
+¿en qué situación es conveniente utilizar el "Creation Parameter Method"?
+
+Un metodo de creación es útil cuando queremos instanciar un objeto y queremos que este se inicialice con todas las variables en el momento de su creación.
+Agrega expresividad al utilizar un Setter con el nombre del método antepuesto por "set" seguido del nombre de las variables a inicializar, además de dar abstracción a la lógica que requieran estos métodos para chequear los valores que inicialicen estas variables.
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+Actividad de lectura #3
+
+En base al siguiente fragmento, responda: 
+¿cómo se debe proporcionar acceso a variables que referencian a una colección?
+
+El acceso a variables que referencian una colección debe ser proporcionado de manera indirecta a través de métodos Getter. Por medio de estos, podemos agregar comprobaciones y modificaciones sobre el estado del objeto para mantener todos los datos de la clase de manera consistente.
+Cómo vimos en el ejemplo de calcular sueldos totales, teniendo o no el control de como agregan o quitan empleados otros objetos.
+Es importante brindar los métodos y mensajes disponibles para trabajar con las colecciones de datos, agregando una interfaz sobre la colección, para limitar como se trabajará sobre ella y agregando una capa de abstracción.
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+Actividad de lectura #4
+
+En base al siguiente fragmento, responda: 
+¿por qué son necesarios dos métodos para asignar el estado a una propiedad booleana?
+
+Necesitamos dos métodos para tener uno que asigne un valor de verdadero y otro de falso. Esto permite, como dije antes, agregar una capa de abstracción sobre los problemas, evitando ver la estrategia de implementación al cliente.
+Se expondrán dos métodos como hacerVerdadero() o hacerloFalso(), para que el cliente solo sepa y pueda trabajar sobre el booleano con estos mensajes.

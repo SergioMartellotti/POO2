@@ -1,0 +1,11 @@
+package punto9;
+import punto8.Point;
+
+
+public class Cuadrado extends Rectangulo{
+	
+	public Cuadrado(Point p){
+		super(p,p);
+	}
+	
+}

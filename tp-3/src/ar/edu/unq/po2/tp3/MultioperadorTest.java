@@ -1,0 +1,44 @@
+package ar.edu.unq.po2.tp3;
+import java.util.ArrayList;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+
+class MultioperadorTest {
+
+	private ArrayList<Integer> numeros = new ArrayList<>(); 
+	Multioperador calculadora = new Multioperador();
+	
+	
+	@Test
+	public void testSuma() {
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		numeros.add(5);
+		assertEquals(15,calculadora.sumador(numeros));
+	}
+
+	@Test
+	public void testResta() {
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		numeros.add(5);
+		assertEquals((-15),calculadora.restador(numeros));
+	}
+	
+	@Test
+	public void testMult() {
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		numeros.add(5);
+		assertEquals(120,calculadora.multiplicador(numeros));
+	}
+}

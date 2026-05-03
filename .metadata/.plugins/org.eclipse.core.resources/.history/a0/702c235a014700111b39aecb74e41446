@@ -1,0 +1,9 @@
+package punto9;
+
+public class Cuadrado extends Rectangulo{
+	
+	public Cuadrado(Point p){
+		super(p,p);
+	}
+	
+}

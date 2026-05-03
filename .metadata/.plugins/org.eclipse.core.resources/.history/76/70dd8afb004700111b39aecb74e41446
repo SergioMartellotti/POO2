@@ -1,0 +1,33 @@
+package punto9;
+import punto8.Point;
+
+public class Rectangulo {
+	
+	private Point puntoA;
+	private Point puntoB;
+	
+	public Rectangulo(Point p1, Point p2) {
+        this.puntoA = p1;
+        this.puntoB = p2;
+    }
+    
+    public int getAncho() {
+        return Math.abs(puntoB.getEjeX() - puntoA.getEjeX());
+    }
+    
+    public int getAlto() {
+        return Math.abs(puntoB.getEjeY() - puntoA.getEjeY());
+    }
+    
+    public int getArea() {
+        return this.getAncho() * this.getAlto();
+    }
+
+    public int getPerimetro() {
+    	return (this.getAncho()*2 + this.getAlto()*2); 
+    }
+    
+    public void verForma(){
+    	if (this.get)
+    }
+}

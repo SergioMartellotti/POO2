@@ -1,0 +1,20 @@
+Nombre: Ana Martinez
+Dirección: San Martin 789
+Fecha de emisión: 2026-05-02
+
+Conceptos para sueldo Bruto: 
+Sueldo Basico: 90000.0
+Horas Extras: 0.0
+
+Sueldo Bruto = Sueldo Básico + Conceptos: 
+Sueldo Bruto: 90000.0
+
+Conceptos de retenciones: 
+Obra Social: -9000.0
+Aporte por Edad: -25.0
+Aporte Jubilatorio: -9000.0
+
+Retenciones: 18025.0
+
+Sueldo Neto = Sueldo Bruto - Retenciones. 
+Sueldo Neto: 71975.0

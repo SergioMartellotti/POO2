@@ -1,0 +1,19 @@
+package punto9;
+import punto8.Point;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class RectanguloTest {
+	
+	private Rectangulo rectanguloH;
+	private Rectangulo rectanguloV;
+	private Cuadrado cuadrado;
+	
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

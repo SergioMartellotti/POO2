@@ -1,0 +1,10 @@
+package punto11;
+
+import com.sun.tools.javac.util.List;
+
+public class EquipoDeTrabajo {
+
+	private String nombre;
+	private List<Persona> equipo;
+	
+}

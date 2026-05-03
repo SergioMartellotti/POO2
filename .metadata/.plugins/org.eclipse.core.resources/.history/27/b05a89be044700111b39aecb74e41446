@@ -1,0 +1,21 @@
+package punto9;
+import punto8.Point;
+
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class RectanguloTest {
+	
+	private Rectangulo rectanguloH;
+	private Rectangulo rectanguloV;
+	private Cuadrado cuadrado;
+	
+	@Test
+	void testRectanguloR() throws Exception {
+		rectanguloH = new Rectangulo(new Point(1,5), new Point(2,6));		
+		assertThrows(Exception.Rectangulo, new Rectangulo(new Point(1,5), new Point(2,6));
+	}
+
+}

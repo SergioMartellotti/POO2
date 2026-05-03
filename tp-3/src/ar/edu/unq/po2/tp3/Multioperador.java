@@ -1,0 +1,33 @@
+package ar.edu.unq.po2.tp3;
+
+import java.util.ArrayList;
+
+public class Multioperador {
+	
+	public Integer sumador(ArrayList<Integer> numeros) {
+		Integer result = 0;
+		
+		for (Integer num : numeros) {
+			result+=num;
+		}
+		return result;
+	}
+	
+	public Integer multiplicador(ArrayList<Integer> numeros) {
+		Integer result = 1;
+		
+		for (Integer num : numeros) {
+			result = result * num;
+		}
+		return result;
+	}	
+	
+	public Integer restador(ArrayList<Integer> numeros) {
+		Integer result = 0;
+		
+		for (Integer num : numeros) {
+			result-=num;
+		}
+		return result;
+	}
+}

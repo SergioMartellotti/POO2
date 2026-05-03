@@ -1,0 +1,14 @@
+package punto11;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EquipoDeTrabajo {
+
+	private String nombre;
+	private List<Persona> equipo;
+	
+	public EquipoDeTrabajo(String nombre){
+		this.nombre=nombre;
+	}
+}

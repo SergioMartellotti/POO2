@@ -1,0 +1,20 @@
+Nombre: Carlos Gomez
+Dirección: Rivadavia 456
+Fecha de emisión: 2026-05-02
+
+Conceptos para sueldo Bruto: 
+Sueldo Basico: 75000.0
+Horas Extras: 600.0
+
+Sueldo Bruto = Sueldo Básico + Conceptos: 
+Sueldo Bruto: 75600.0
+
+Conceptos de retenciones: 
+Obra Social: -7560.0
+Aporte Jubilatorio: -7560.0
+Retención por horas Extras: -75.0
+
+Retenciones: 15195.0
+
+Sueldo Neto = Sueldo Bruto - Retenciones. 
+Sueldo Neto: 60405.0

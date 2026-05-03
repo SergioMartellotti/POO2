@@ -1,0 +1,28 @@
+package ar.edu.unq.po2.tp3;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Counter {
+	
+	private List<Integer> numbers;
+	
+	public Counter(){
+		numbers = new ArrayList<>();
+	}
+	
+	public void addNumber(Integer number){
+		numbers.add(number);
+	}
+	
+	public int getEvenOcurrences(){
+		int result = 0;
+		
+		
+		
+		return result;
+	}
+	
+	public List<Integer> getNumbersList(){
+		return numbers;
+	}
+}

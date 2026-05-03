@@ -1,0 +1,10 @@
+package punto9;
+import punto8.Point;
+
+
+public class Cuadrado extends Rectangulo{
+	
+	public Cuadrado(Point p, int tamanio){
+		super(p,Point(p.getEjeX()+tamanio, p.getEjeY()+tamanio));
+	}
+}

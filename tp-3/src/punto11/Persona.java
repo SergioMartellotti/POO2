@@ -1,0 +1,34 @@
+package punto11;
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Persona {
+
+	private String nombre;
+	private String apellido;
+	private LocalDate fechaNac;
+
+	//Ejemplo LocalDate.of(1980, 5, 15)
+	public Persona(String nombre, String apellido, LocalDate fechaNac) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.fechaNac = fechaNac;
+	}
+	
+	public int getEdad() {
+		return Period.between(fechaNac, LocalDate.now()).getYears();
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}	
+	
+	public LocalDate getFechaNac() {
+		return fechaNac;
+	}	
+}
+

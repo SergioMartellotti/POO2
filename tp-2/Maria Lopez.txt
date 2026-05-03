@@ -1,0 +1,19 @@
+Nombre: Maria Lopez
+Dirección: Avenida Siempre Viva 742
+Fecha de emisión: 2026-05-02
+
+Conceptos para sueldo Bruto: 
+Sueldo Basico: 85000.0
+Antiguedad: 250.0
+
+Sueldo Bruto = Sueldo Básico + Conceptos: 
+Sueldo Bruto: 85250.0
+
+Conceptos de retenciones: 
+Obra Social: -8525.0
+Aporte Jubilatorio: -8525.0
+
+Retenciones: 17050.0
+
+Sueldo Neto = Sueldo Bruto - Retenciones. 
+Sueldo Neto: 68200.0

@@ -1,0 +1,16 @@
+package punto8;
+
+public class Point {
+	Integer ejeX;
+	Integer ejeY;
+	
+	public Point(Integer x, Integer y) {
+		ejeX = x;
+		ejeY = y;
+	}
+	
+	public Point() {
+		ejeX=0;
+		ejeY=0;
+	}
+}

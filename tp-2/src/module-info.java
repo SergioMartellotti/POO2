@@ -1,0 +1,2 @@
+module pr2 {
+}

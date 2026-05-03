@@ -1,0 +1,91 @@
+package ar.edu.unq.po2.tp3;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Counter {
+	
+	private List<Integer> numbers;
+	
+	public Counter(){
+		numbers = new ArrayList<>();
+	}
+	
+	public void addNumber(Integer number){
+		numbers.add(number);
+	}
+	
+	public int getEvenOcurrences(){
+		int result = 0;
+		
+		for(Integer number : getNumbersList()) {
+			if (number % 2 == 0){
+				result++;
+			}
+		}
+		
+		return result;
+	}
+	
+	public int getOddOcurrences(){
+		int result = 0;
+		
+		for(Integer number : getNumbersList()) {
+			if (number % 2 != 0){
+				result++;
+			}
+		}
+		
+		return result;
+	}	
+	
+	public int getDivisorsFor(int nro){
+		int result = 0;
+		
+		for(Integer number : getNumbersList()) {
+			if (number % nro == 0){
+				result++;
+			}
+		}
+		
+		return result;
+	}
+	
+	public List<Integer> getNumbersList(){
+		return numbers;
+	}
+	
+	public Integer checkPairs(List<Integer> pares) {
+		Integer numeroBuscado = pares.get(0);
+		int countPairs = countPairNro(pares.get(0));
+
+		for(int i = 1; i<pares.size();i++) {
+			int actualPairs = countPairNro(pares.get(i));
+			if (countPairs < actualPairs){
+				numeroBuscado = pares.get(i);
+				countPairs = actualPairs;
+			}
+		}
+		return numeroBuscado;
+	}
+	
+	private int countPairNro(Integer num) {
+		int counter = 0;
+		while (num>=10) {
+			counter++;
+			num=num/10;
+		}
+		return counter;
+	}
+	
+	public int maxDiv(int x, int y) {
+		int result = 1000;
+		
+		while(result>0) {
+			if(result%x==0 & result%y==0) {
+				break;
+			}
+			result--;
+		}
+		return result;
+	}
+}
