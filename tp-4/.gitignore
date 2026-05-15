@@ -1,1 +1,4 @@
 /bin/
+echo ".metadata/" >> .gitignore
+echo ".log" >> .gitignore
+echo ".plugins/" >> .gitignore
