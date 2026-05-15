@@ -1,7 +1,0 @@
-package punto10;
-
-public class Persona {
-
-	private String nombre;
-	private Date fechaNac;
-}
