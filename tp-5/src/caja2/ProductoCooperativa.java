@@ -6,7 +6,10 @@ public class ProductoCooperativa extends Producto{
 		super(precio,cantidad);
 	}
 	
-	public Double precioFinal() {
+	
+
+	
+	public Double getPrecio() {
 		return this.precio - (this.precio * 0.1);
 	}
 }

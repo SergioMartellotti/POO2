@@ -1,6 +1,6 @@
 package caja2;
 
-abstract class Producto implements Pagable{
+abstract class Producto {
 	
 	protected Double precio;
 	private int cantidad;
@@ -17,14 +17,6 @@ abstract class Producto implements Pagable{
 	public void restarUno() {
 		cantidad--;
 	}
-	
-	public Double getPrecio() {
-		if (this.hayStock()) {
-			this.restarUno();
-			return this.precioFinal();
-		}
-		return 0d;
-	}
-	
-	abstract Double precioFinal();
+		
+	public abstract Double getPrecio();
 }

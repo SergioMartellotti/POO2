@@ -33,9 +33,4 @@ class ProductoTest {
 		assertEquals(pan.getPrecio(),80);
 	}	
 
-	@Test
-	void testStock() {
-		assertEquals(pan.getPrecio(),80);
-		assertEquals(pan.getPrecio(),0);
-	}
 }

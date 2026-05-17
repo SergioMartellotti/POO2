@@ -6,7 +6,7 @@ public class ProductoTradicional extends Producto{
 		super(precio,cantidad);
 	}
 	
-	public Double precioFinal() {
+	public Double getPrecio() {
 		return super.precio;
 	}
 	

@@ -4,17 +4,21 @@ import java.util.List;
 
 public class Caja {
 
-	private List<Pagable> productos;
+	protected List<Producto> productos;
 	
-	public Caja(List<Pagable> productos) {
+	public Caja(List<Producto> productos) {
 		this.productos = productos; 
 	}
 	
-	public Double vender(List<Pagable> productos){
+	public Double vender(List<Producto> productos){
 		Double monto = 0d;
-		for(Pagable producto : productos) {
+		for(Producto producto : productos) {
+			if (producto.hayStock()) {
+				producto.restarUno();
 				monto += producto.getPrecio();
+			}
 		}
 		return monto;
 	}
 }
+
