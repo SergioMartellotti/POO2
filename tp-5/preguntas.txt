@@ -14,3 +14,12 @@ No, las Interfaces no pueden ser instanciadas, cómo si las clases.
 Si la "Interfaz A" y la "Interfaz B" son implementadas por la misma clase y ambas terminan con un default method definido con el mismo nombre, podría llegar a generarse un problema.
 
 6. ¿por qué lenguajes como Smalltalk, no es necesaria la implementación de interfaces?
+
+
+
+
+Interfaces, Colecciones y otras yerbas.
+Si en lugar de XXX, YYY, WWW y ZZZ usamos Collection, List, ArrayList, LinkedList, funcionarían todas las interfaces excepto con Collection que no tiene ni el método get ni getSubCollection.
+
+
+
