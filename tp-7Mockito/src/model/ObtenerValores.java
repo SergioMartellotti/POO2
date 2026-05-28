@@ -2,7 +2,6 @@
 	
 	import java.util.List;
 	
-	public interface ObtenerValores {
-		public List<String> obtenerValores(List<Carta> cartas);
-		public String extraerValor(String c);
+	public interface ObtenerValores<T> {
+		public List<T> obtenerValores(List<Carta> cartas);
 	}

@@ -2,9 +2,9 @@ package model;
 
 import java.util.List;
 
-public class ValidarTrio extends ValidadorMano{
+public class ValidarTrio extends ValidadorMano<Valor>{
 	
-	private ObtenerValores valoresDeMano;
+	private ObtenerValores<Valor> valoresDeMano;
 
 	public ValidarTrio() {
 		valoresDeMano = new ValoresNumeros();
@@ -12,8 +12,8 @@ public class ValidarTrio extends ValidadorMano{
 	
 	public String getNombre() {return "Trio";}
 	
-	public boolean validar(List<String> cartas) {
-		List<String> valores = valoresDeMano.obtenerValores(cartas);
+	public boolean validar(List<Carta> cartas) {
+		List<Valor> valores = valoresDeMano.obtenerValores(cartas);
 		return buscarNIguales(valores, 0, 3) || buscarNIguales(valores, 1, 3) || buscarNIguales(valores, 2, 3); 
 	}
 }

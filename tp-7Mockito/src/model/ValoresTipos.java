@@ -3,16 +3,13 @@ package model;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ValoresTipos implements ObtenerValores{
+public class ValoresTipos implements ObtenerValores<String>{
 	
-	public List<String> obtenerValores(List<String> cartas)  {
+	public List<String> obtenerValores(List<Carta> cartas)  {
 	    return cartas.stream()
-	        .map(c -> extraerValor(c))
+	        .map(c -> c.getPalo())
 	        .collect(Collectors.toList());
 	}
-	
-	public String extraerValor(String c) {
-		return c.substring(c.length() - 1);
-	}
+
 
 }
