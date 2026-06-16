@@ -1,0 +1,58 @@
+Ejercicio 4 - Llamadas telefónicas
+A partir de las siguientes líneas de código identifique estos conceptos, si es posible:
+● Template Method.
+● Operaciones primitivas.
+● Operaciones concretas.
+● Hook Method.
+
+
+En este caso, el Template Method es costoFinal()
+En las operaciones primitivas tenemos a esHoraPico() que queda como abstracta a definir por la subclase
+Como operaciones concretas queda: getTiempo() y getHoraDelDia()
+Hook method está costoNeto() que está definida pero igual es sobreescrita.
+public abstract class LlamadaTelefonica {
+	private int tiempo;
+	private int horaDelDia;
+	
+	public LlamadaTelefonica(int tiempo, int horaDelDia){
+		this.tiempo=tiempo;
+		this.horaDelDia=horaDelDia;
+	}
+	
+	public int getTiempo(){
+		return this.tiempo;
+	}
+	public int getHoraDelDia(){
+		return this.horaDelDia;
+	}
+	
+	public abstract boolean esHoraPico();
+
+	public float costoFinal(){
+		if(this.esHoraPico()){
+			return this.costoNeto()*1.2f*this.getTiempo();
+		}else{
+			return this.costoNeto()*this.getTiempo();
+		}
+	}
+
+	public float costoNeto(){
+		return this.getTiempo()*1;
+	}
+}
+
+public classLlamadaDescuento extends LlamadaTelefonica{
+		public LlamadaDescuento(int tiempo, int horaDelDia) {
+			super(tiempo, horaDelDia);
+		}
+
+	@Override
+	public boolean esHoraPico() {
+		return false;
+	}
+
+	@Override
+	public float costoNeto(){
+		return this.getTiempo()*0.95f;
+	}
+}
